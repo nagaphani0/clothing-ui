@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import { Search, ShoppingBag, User, Menu, X, Heart } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
 
 const Header = () => {
+    const navigate = useNavigate();
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [isSearchOpen, setIsSearchOpen] = useState(false);
 
@@ -34,12 +36,18 @@ const Header = () => {
                         <a href="#sustainability" className="text-gray-700 hover:text-pink-600 transition-colors duration-300 font-medium">
                             Sustainability
                         </a>
+                        <button
+                            onClick={() => navigate('/admin')}
+                            className="text-gray-700 hover:text-pink-600 transition-colors duration-300 font-medium"
+                        >
+                            Admin
+                        </button>
                     </div>
 
                     {/* Actions */}
                     <div className="flex items-center space-x-4">
                         <button
-                            onClick={toggleSearch}
+                            onClick={() => navigate('/search')}
                             className="p-2 text-gray-700 hover:text-pink-600 transition-colors duration-300"
                             aria-label="Search"
                         >
@@ -48,10 +56,18 @@ const Header = () => {
                         <button className="p-2 text-gray-700 hover:text-pink-600 transition-colors duration-300" aria-label="Wishlist">
                             <Heart size={20} />
                         </button>
-                        <button className="p-2 text-gray-700 hover:text-pink-600 transition-colors duration-300" aria-label="Account">
+                        <button
+                            onClick={() => navigate('/account')}
+                            className="p-2 text-gray-700 hover:text-pink-600 transition-colors duration-300"
+                            aria-label="Account"
+                        >
                             <User size={20} />
                         </button>
-                        <button className="p-2 text-gray-700 hover:text-pink-600 transition-colors duration-300 relative" aria-label="Shopping bag">
+                        <button
+                            onClick={() => navigate('/cart')}
+                            className="p-2 text-gray-700 hover:text-pink-600 transition-colors duration-300 relative"
+                            aria-label="Shopping bag"
+                        >
                             <ShoppingBag size={20} />
                             <span className="absolute -top-1 -right-1 bg-pink-600 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
                 2
@@ -111,6 +127,12 @@ const Header = () => {
                                 <a href="#sustainability" className="text-gray-700 hover:text-pink-600 transition-colors duration-300 font-medium">
                                     Sustainability
                                 </a>
+                                <button
+                                    onClick={() => navigate('/admin')}
+                                    className="text-gray-700 hover:text-pink-600 transition-colors duration-300 font-medium text-left"
+                                >
+                                    Admin
+                                </button>
                             </div>
                         </motion.div>
                     )}
