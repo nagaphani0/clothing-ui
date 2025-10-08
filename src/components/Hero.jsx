@@ -1,6 +1,6 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-import { ArrowRight } from 'lucide-react';
+import {motion} from 'framer-motion';
+import {ArrowRight} from 'lucide-react';
 
 const Hero = () => {
     return (
@@ -9,6 +9,8 @@ const Hero = () => {
             <div className="absolute inset-0">
                 <img
                     src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
+                    // src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/bts-style-1606151427.jpg"
+                    // src="https://levi.in/cdn/shop/files/Artboard_1_5f1b5ec5-ca54-4f98-9c34-54eac07a4abd.png?v=1759225915"
                     alt="Luxury fashion model in elegant attire"
                     className="w-full h-full object-cover"
                     loading="eager"

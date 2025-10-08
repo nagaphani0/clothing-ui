@@ -1,37 +1,39 @@
 import React from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import { Heart, ShoppingBag, Star, ArrowLeft } from 'lucide-react';
-import { toast } from 'react-toastify';
+import {useNavigate, useParams} from 'react-router-dom';
+import {motion} from 'framer-motion';
+import {ArrowLeft, Heart, ShoppingBag, Star} from 'lucide-react';
+import {toast} from 'react-toastify';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import {products} from "../components/ProductGrid.jsx";
 
 const ProductDetails= () => {
     const { id } = useParams();
     const navigate = useNavigate();
 
     // Mock product data - in a real app, this would come from an API or context
-    const product = {
-        id: parseInt(id || '1'),
-        name: 'Silk Midi Dress',
-        brand: 'LUXE Atelier',
-        price: 890,
-        originalPrice: 1200,
-        image: 'https://images.unsplash.com/photo-1595777457583-95e059d581b8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-        images: [
-            'https://images.unsplash.com/photo-1595777457583-95e059d581b8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-            'https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
-            'https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80'
-        ],
-        isNew: true,
-        colors: ['#000000', '#8B4513', '#800080'],
-        sizes: ['XS', 'S', 'M', 'L', 'XL'],
-        description: 'This elegant silk midi dress features a flattering silhouette with delicate detailing. Made from the finest silk, it offers comfort and luxury for any occasion.',
-        rating: 4.5,
-        reviews: 128,
-        inStock: true
-    };
+    // const product = {
+    //     id: parseInt(id || '1'),
+    //     name: 'Silk Midi Dress',
+    //     brand: 'LUXE Atelier',
+    //     price: 890,
+    //     originalPrice: 1200,
+    //     image: 'https://images.unsplash.com/photo-1595777457583-95e059d581b8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+    //     images: [
+    //         'https://images.unsplash.com/photo-1595777457583-95e059d581b8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+    //         'https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
+    //         'https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80'
+    //     ],
+    //     isNew: true,
+    //     colors: ['#000000', '#8B4513', '#800080'],
+    //     sizes: ['XS', 'S', 'M', 'L', 'XL'],
+    //     description: 'This elegant silk midi dress features a flattering silhouette with delicate detailing. Made from the finest silk, it offers comfort and luxury for any occasion.',
+    //     rating: 4.5,
+    //     reviews: 128,
+    //     inStock: true
+    // };
 
+    const product = products[parseInt(id || '1') - 1];
     const [selectedImage, setSelectedImage] = React.useState(0);
     const [selectedColor, setSelectedColor] = React.useState(0);
     const [selectedSize, setSelectedSize] = React.useState(0);
@@ -66,7 +68,7 @@ const ProductDetails= () => {
                                 className="aspect-[3/4] overflow-hidden rounded-2xl bg-gray-100 mb-4"
                             >
                                 <img
-                                    src={product.images[selectedImage]}
+                                    src={product.image}
                                     alt={product.name}
                                     className="w-full h-full object-cover"
                                 />

@@ -1,69 +1,127 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-import { Heart, ShoppingBag } from 'lucide-react';
-import { useNavigate } from 'react-router-dom';
+import {motion} from 'framer-motion';
+import {Heart, ShoppingBag} from 'lucide-react';
+import {useNavigate} from 'react-router-dom';
+
+
+export const products = [
+    {
+        id: 1,
+        name: 'Silk Midi Dress',
+        brand: 'LUXE Atelier',
+        price: 890,
+        originalPrice: 1200,
+        image: 'https://images.unsplash.com/photo-1595777457583-95e059d581b8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+        isNew: true,
+        colors: ['#000000', '#8B4513', '#800080'],
+
+
+        images: [
+            'https://images.unsplash.com/photo-1595777457583-95e059d581b8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+            'https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
+            'https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80'
+        ],
+        sizes: ['XS', 'S', 'M', 'L', 'XL'],
+        description: 'This elegant silk midi dress features a flattering silhouette with delicate detailing. Made from the finest silk, it offers comfort and luxury for any occasion.',
+        rating: 4.5,
+        reviews: 128,
+        inStock: true
+    },
+    {
+        id: 2,
+        name: 'Cashmere Blazer',
+        brand: 'LUXE Essentials',
+        price: 1450,
+        image: 'https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+        isNew: false,
+        colors: ['#F5F5DC', '#000000', '#708090'],
+
+        images: [
+            'https://images.unsplash.com/photo-1595777457583-95e059d581b8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+            'https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
+            'https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80'
+        ],
+        sizes: ['XS', 'S', 'M', 'L', 'XL'],
+        description: 'This elegant silk midi dress features a flattering silhouette with delicate detailing. Made from the finest silk, it offers comfort and luxury for any occasion.',
+        rating: 4.5,
+        reviews: 128,
+        inStock: true
+    },
+    {
+        id: 3,
+        name: 'Evening Gown',
+        brand: 'LUXE Couture',
+        price: 2890,
+        image: 'https://levi.in/cdn/shop/files/A35850007_01_Styleshot.jpg?v=1736749759',
+        isNew: false,
+        colors: ['#000000', '#8B0000', '#000080'],
+
+        images: [
+            'https://images.unsplash.com/photo-1595777457583-95e059d581b8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+            'https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
+            'https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80'
+        ],
+        sizes: ['XS', 'S', 'M', 'L', 'XL'],
+        description: 'This elegant silk midi dress features a flattering silhouette with delicate detailing. Made from the finest silk, it offers comfort and luxury for any occasion.',
+        rating: 4.5,
+        reviews: 128,
+        inStock: true
+    },
+    {
+        id: 4,
+        name: 'Leather Handbag',
+        brand: 'LUXE Accessories',
+        price: 650,
+        image: 'https://images.unsplash.com/photo-1584917865442-de89df76afd3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+        isNew: true,
+        colors: ['#8B4513', '#000000', '#F5F5DC'],
+
+        images: [
+            'https://images.unsplash.com/photo-1595777457583-95e059d581b8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+            'https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
+            'https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80'
+        ],
+        sizes: ['XS', 'S', 'M', 'L', 'XL'],
+        description: 'This elegant silk midi dress features a flattering silhouette with delicate detailing. Made from the finest silk, it offers comfort and luxury for any occasion.',
+        rating: 4.5,
+        reviews: 128,
+        inStock: true
+    },
+    {
+        id: 5,
+        name: 'Wool Coat',
+        brand: 'LUXE Outerwear',
+        price: 1890,
+        originalPrice: 2400,
+        image: 'https://images.unsplash.com/photo-1551698618-1dfe5d97d256?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+        isNew: false,
+        colors: ['#8B4513', '#000000', '#708090'],
+
+        images: [
+            'https://images.unsplash.com/photo-1595777457583-95e059d581b8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+            'https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
+            'https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80'
+        ],
+        sizes: ['XS', 'S', 'M', 'L', 'XL'],
+        description: 'This elegant silk midi dress features a flattering silhouette with delicate detailing. Made from the finest silk, it offers comfort and luxury for any occasion.',
+        rating: 4.5,
+        reviews: 128,
+        inStock: true
+    },
+    {
+        id: 6,
+        name: 'Designer Heels',
+        brand: 'LUXE Footwear',
+        price: 780,
+        image: 'https://images.unsplash.com/photo-1543163521-1bf539c55dd2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+        isNew: true,
+        colors: ['#000000', '#8B0000', '#FFD700']
+    }
+];
 
 const ProductGrid= () => {
     const navigate = useNavigate();
 
-    const products = [
-        {
-            id: 1,
-            name: 'Silk Midi Dress',
-            brand: 'LUXE Atelier',
-            price: 890,
-            originalPrice: 1200,
-            image: 'https://images.unsplash.com/photo-1595777457583-95e059d581b8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-            isNew: true,
-            colors: ['#000000', '#8B4513', '#800080']
-        },
-        {
-            id: 2,
-            name: 'Cashmere Blazer',
-            brand: 'LUXE Essentials',
-            price: 1450,
-            image: 'https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-            isNew: false,
-            colors: ['#F5F5DC', '#000000', '#708090']
-        },
-        {
-            id: 3,
-            name: 'Evening Gown',
-            brand: 'LUXE Couture',
-            price: 2890,
-            image: 'https://images.unsplash.com/photo-1566479179817-c0b5b4b8b1cc?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-            isNew: false,
-            colors: ['#000000', '#8B0000', '#000080']
-        },
-        {
-            id: 4,
-            name: 'Leather Handbag',
-            brand: 'LUXE Accessories',
-            price: 650,
-            image: 'https://images.unsplash.com/photo-1584917865442-de89df76afd3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-            isNew: true,
-            colors: ['#8B4513', '#000000', '#F5F5DC']
-        },
-        {
-            id: 5,
-            name: 'Wool Coat',
-            brand: 'LUXE Outerwear',
-            price: 1890,
-            originalPrice: 2400,
-            image: 'https://images.unsplash.com/photo-1551698618-1dfe5d97d256?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-            isNew: false,
-            colors: ['#8B4513', '#000000', '#708090']
-        },
-        {
-            id: 6,
-            name: 'Designer Heels',
-            brand: 'LUXE Footwear',
-            price: 780,
-            image: 'https://images.unsplash.com/photo-1543163521-1bf539c55dd2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-            isNew: true,
-            colors: ['#000000', '#8B0000', '#FFD700']
-        }
-    ];
 
     return (
         <section className="py-20 bg-white">
