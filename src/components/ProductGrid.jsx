@@ -1,8 +1,11 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Heart, ShoppingBag } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
-const ProductGrid = () => {
+const ProductGrid= () => {
+    const navigate = useNavigate();
+
     const products = [
         {
             id: 1,
@@ -89,6 +92,7 @@ const ProductGrid = () => {
                             transition={{ duration: 0.6, delay: index * 0.1 }}
                             viewport={{ once: true }}
                             className="group cursor-pointer"
+                            onClick={() => navigate(`/product/${product.id}`)}
                         >
                             <div className="relative overflow-hidden rounded-2xl bg-white shadow-sm hover:shadow-xl transition-all duration-500">
                                 <div className="aspect-[3/4] overflow-hidden relative">

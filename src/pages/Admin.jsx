@@ -87,7 +87,9 @@ const Admin = () => {
             setProducts([...products, newProduct]);
             toast.success('Product added successfully!');
         } else if (editingId) {
-            setProducts(products.map(p => p.id === editingId ? { ...formData, id }));
+            setProducts(products.map(p =>
+                p.id === editingId ? { ...formData, id: editingId } : p
+            ));
             toast.success('Product updated successfully!');
         }
         setIsAdding(false);
