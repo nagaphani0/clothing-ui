@@ -1,8 +1,8 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-import { Minus, Plus, Trash2, ShoppingBag } from 'lucide-react';
-import { useNavigate } from 'react-router-dom';
-import { toast } from 'react-toastify';
+import {motion} from 'framer-motion';
+import {Minus, Plus, ShoppingBag, Trash2} from 'lucide-react';
+import {useNavigate} from 'react-router-dom';
+import {toast} from 'react-toastify';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 //
@@ -19,6 +19,8 @@ import Footer from '../components/Footer';
 
 const Cart= () => {
     const navigate = useNavigate();
+
+    // const items=localStorage.getItem("cart")
 
     // const [cartItems, setCartItems] = React.useState<CartItem[]>([
     const [cartItems, setCartItems] = React.useState([
