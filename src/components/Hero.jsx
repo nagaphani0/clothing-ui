@@ -1,7 +1,7 @@
 import React from 'react';
 import {motion} from 'framer-motion';
 import {ArrowRight} from 'lucide-react';
-import heroJp from '../assets/hero.jpg';
+// import heroJp from '../assets/hero.jpg';
 
 const Hero = () => {
     return (
@@ -13,12 +13,14 @@ const Hero = () => {
                     // src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/bts-style-1606151427.jpg"
                     // src="https://levi.in/cdn/shop/files/Artboard_1_5f1b5ec5-ca54-4f98-9c34-54eac07a4abd.png?v=1759225915"
                     // src="https://wallpaperbat.com/img/9671954-music-bts-4k-ultra-hd-wallpaper.jpg"
-                    src={heroJp}
+                    src="https://wallpaperbat.com/img/646598-bts-lapk-wallpaper.jpg"
+                    // src={heroJp}
 
                     alt="Luxury fashion model in elegant attire"
                     className="w-full h-full object-cover"
                     loading="eager"
                 />
+                {/*all images  https://wallpaperbat.com/bts-4k-wallpapers*/}
                 <div className="absolute inset-0 bg-gradient-to-r from-black/40 via-transparent to-black/20"></div>
             </div>
 
