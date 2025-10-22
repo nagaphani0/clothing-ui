@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-import { Search, ShoppingBag, User, Menu, X, Heart } from 'lucide-react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { useNavigate } from 'react-router-dom';
+import React, {useState} from 'react';
+import {Heart, Menu, Search, ShoppingBag, User, X} from 'lucide-react';
+import {AnimatePresence, motion} from 'framer-motion';
+import {useNavigate} from 'react-router-dom';
 
 const Header = () => {
     const navigate = useNavigate();
@@ -9,7 +9,7 @@ const Header = () => {
     const [isSearchOpen, setIsSearchOpen] = useState(false);
 
     const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
-    const toggleSearch = () => setIsSearchOpen(!isSearchOpen);
+    // const toggleSearch = () => setIsSearchOpen(!isSearchOpen);
 
     return (
         <header className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-100">
@@ -18,22 +18,22 @@ const Header = () => {
                     {/* Logo */}
                     <div className="flex-shrink-0">
                         <a href="/" className="text-2xl font-serif font-bold text-gray-900 hover:text-pink-600 transition-colors duration-300">
-                            LUXE
+                            AMMU
                         </a>
                     </div>
 
                     {/* Desktop Navigation */}
                     <div className="hidden md:flex items-center space-x-8">
-                        <a href="#collections" className="text-gray-700 hover:text-pink-600 transition-colors duration-300 font-medium">
+                        <a href="/collections" className="text-gray-700 hover:text-pink-600 transition-colors duration-300 font-medium">
                             Collections
                         </a>
-                        <a href="#women" className="text-gray-700 hover:text-pink-600 transition-colors duration-300 font-medium">
+                        <a href="/women" className="text-gray-700 hover:text-pink-600 transition-colors duration-300 font-medium">
                             Women
                         </a>
-                        <a href="#men" className="text-gray-700 hover:text-pink-600 transition-colors duration-300 font-medium">
+                        <a href="/men" className="text-gray-700 hover:text-pink-600 transition-colors duration-300 font-medium">
                             Men
                         </a>
-                        <a href="#sustainability" className="text-gray-700 hover:text-pink-600 transition-colors duration-300 font-medium">
+                        <a href="/sustainability" className="text-gray-700 hover:text-pink-600 transition-colors duration-300 font-medium">
                             Sustainability
                         </a>
                         <button

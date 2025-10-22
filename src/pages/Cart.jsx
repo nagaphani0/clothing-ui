@@ -104,6 +104,7 @@ const Cart= () => {
                                                     <h3 className="font-semibold text-gray-900">{item.name}</h3>
                                                     <p className="text-sm text-gray-600">{item.brand}</p>
                                                     <p className="text-sm text-gray-500">Size: {item.size} | Color: {item.color}</p>
+
                                                     <p className="font-semibold text-gray-900">${item.price}</p>
                                                 </div>
                                                 <div className="flex items-center space-x-2">
