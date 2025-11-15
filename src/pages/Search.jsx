@@ -100,7 +100,7 @@ const Search= () => {
                                 <div className="p-4">
                                     <div className="text-sm text-gray-500 mb-1">{product.brand}</div>
                                     <h3 className="font-medium text-gray-900 mb-2">{product.name}</h3>
-                                    <div className="font-semibold text-gray-900">${product.price.toLocaleString()}</div>
+                                    <div className="font-semibold text-gray-900">₹{product.price.toLocaleString()}</div>
                                 </div>
                             </motion.div>
                         ))}

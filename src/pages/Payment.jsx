@@ -41,7 +41,7 @@ const Payment= () => {
                                     <div className="space-y-2 text-sm">
                                         <p><strong>Order Number:</strong> #12345</p>
                                         <p><strong>Date:</strong> {new Date().toLocaleDateString()}</p>
-                                        <p><strong>Total:</strong> $961.20</p>
+                                        <p><strong>Total:</strong> ₹961.20</p>
                                         <p><strong>Payment Method:</strong> Credit Card ending in 1234</p>
                                     </div>
                                 </div>
@@ -72,7 +72,7 @@ const Payment= () => {
                                         <p className="text-sm text-gray-600">LUXE Atelier</p>
                                         <p className="text-sm text-gray-500">Quantity: 1</p>
                                     </div>
-                                    <span className="font-semibold">$890.00</span>
+                                    <span className="font-semibold">₹890.00</span>
                                 </div>
                             </div>
                         </div>

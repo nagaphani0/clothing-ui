@@ -1,4 +1,3 @@
-import React from 'react';
 import {motion} from 'framer-motion';
 import {Heart, ShoppingBag} from 'lucide-react';
 import {useNavigate} from 'react-router-dom';
@@ -211,11 +210,11 @@ const ProductGrid= () => {
 
                                     <div className="flex items-center space-x-2">
                     <span className="text-xl font-semibold text-gray-900">
-                      ${product.price.toLocaleString()}
+                      ₹{product.price.toLocaleString()}
                     </span>
                                         {product.originalPrice && (
                                             <span className="text-lg text-gray-500 line-through">
-                        ${product.originalPrice.toLocaleString()}
+                        ₹{product.originalPrice.toLocaleString()}
                       </span>
                                         )}
                                     </div>

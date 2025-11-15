@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import {Heart, Menu, Search, ShoppingBag, User, X} from 'lucide-react';
 import {AnimatePresence, motion} from 'framer-motion';
 import {useNavigate} from 'react-router-dom';
+// import heroJp from '../assets/g.png';
 
 const Header = () => {
     const navigate = useNavigate();
@@ -17,8 +18,9 @@ const Header = () => {
                 <div className="flex items-center justify-between h-16">
                     {/* Logo */}
                     <div className="flex-shrink-0">
+                        {/* <img src={heroJp} alt=""  className="w-30"  /> */}
                         <a href="/" className="text-2xl font-serif font-bold text-gray-900 hover:text-pink-600 transition-colors duration-300">
-                            AMMU
+                            DHARANI
                         </a>
                     </div>
 

@@ -103,9 +103,9 @@ const ProductDetails= () => {
                                 </div>
 
                                 <div className="flex items-center space-x-4 mb-6">
-                                    <span className="text-3xl font-bold text-gray-900">${product.price}</span>
+                                    <span className="text-3xl font-bold text-gray-900">₹{product.price}</span>
                                     {product.originalPrice && (
-                                        <span className="text-xl text-gray-500 line-through">${product.originalPrice}</span>
+                                        <span className="text-xl text-gray-500 line-through">₹{product.originalPrice}</span>
                                     )}
                                 </div>
 
@@ -166,7 +166,7 @@ const ProductDetails= () => {
                                 </div>
 
                                 <div className="text-sm text-gray-600">
-                                    <p className="mb-2"><strong>Free shipping</strong> on orders over $500</p>
+                                    <p className="mb-2"><strong>Free shipping</strong> on orders over ₹500</p>
                                     <p className="mb-2"><strong>30-day returns</strong> - easy and free</p>
                                     <p><strong>In stock</strong> - ships within 2 business days</p>
                                 </div>

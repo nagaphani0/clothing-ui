@@ -140,7 +140,7 @@ const Account= () => {
                                                         <h4 className="font-medium text-gray-900">Silk Midi Dress</h4>
                                                         <p className="text-sm text-gray-600">LUXE Atelier</p>
                                                     </div>
-                                                    <span className="font-semibold">$890.00</span>
+                                                    <span className="font-semibold">₹890.00</span>
                                                 </div>
                                             </div>
                                         </div>
@@ -159,7 +159,7 @@ const Account= () => {
                                                 />
                                                 <h3 className="font-semibold text-gray-900 mb-2">Cashmere Blazer</h3>
                                                 <p className="text-sm text-gray-600 mb-2">LUXE Essentials</p>
-                                                <p className="font-semibold text-gray-900">$1,450</p>
+                                                <p className="font-semibold text-gray-900">₹1,450</p>
                                             </div>
                                         </div>
                                     </div>
